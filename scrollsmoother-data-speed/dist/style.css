@@ -1,0 +1,64 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background: #0e100f;
+}
+
+#smooth-content {
+  overflow: visible;
+  width: 100%;
+  height: 200vh;
+}
+
+.img-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  width: 75%;
+  top: 75vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img-group div {
+  position: relative;
+  width: 20%;
+  aspect-ratio: 1/1;
+  max-width: 124px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.img-group div:nth-child(1) {
+  background-image: url("https://assets.codepen.io/16327/scroll-flair-1.png");
+}
+.img-group div:nth-child(2) {
+  background-image: url("https://assets.codepen.io/16327/scroll-flair-2.png");
+}
+.img-group div:nth-child(3) {
+  background-image: url("https://assets.codepen.io/16327/scroll-flair-3.png");
+}
+.img-group div:nth-child(4) {
+  background-image: url("https://assets.codepen.io/16327/scroll-flair-4.png");
+}
+.img-group div:nth-child(5) {
+  background-image: url("https://assets.codepen.io/16327/flair.png");
+}
+
+.img-group div::before {
+  content: attr(data-speed);
+  position: absolute;
+  color: #fffce1;
+  top: -2rem;
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-size: 16px;
+}

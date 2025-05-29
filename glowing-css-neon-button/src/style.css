@@ -1,0 +1,53 @@
+:root{
+  --color: #1dc0dd;
+}
+p {
+  color: #fff;
+}
+body {
+  background-color: #000;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.bnt-glow a {
+  position: relative;
+  display: inline-block;
+  margin: 40px;
+  padding: 10px 25px;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 5px 0 var(--color);
+  transition: linear .3s;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+.bnt-glow a:hover {
+  color: #000;
+  background-color: var(--color);
+  border-radius: 10px;
+  box-shadow: 0 0 40px 10px var(--color);
+}
+
+.bnt-glow a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 140%;
+  left: 0;
+  background-color: var(--color);
+  transform: perspective(0.2em) rotateX(10deg) scale(1, 0.5);
+  filter: blur(.3em);
+  opacity: 0.3;
+  transition: linear .3s;
+}
+.bnt-glow a:hover::after {
+  opacity: 1;
+}
+
+
+
+
